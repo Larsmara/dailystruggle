@@ -1,7 +1,26 @@
-# Vue 3 + Vite
+# SQL tables
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+**Expenses**
 
-## Recommended IDE Setup
+-   Id
+-   UserId
+-   ExpenseName
+-   CategoryId
+-   Amount
+-   Date
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+**Categories**
+
+-   Id
+-   CategoryName
+-   UserId
+-   Date
+
+**User - Columns**
+
+-   UserId
+-   Name
+-   Username
+-   Email
+-   Picture
+-   Date joined
