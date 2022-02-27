@@ -1,6 +1,4 @@
-<template>
-    <router-view />
-</template>
+<template>Sign up</template>
 
 <script setup></script>
 

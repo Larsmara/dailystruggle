@@ -1,6 +1,4 @@
-<template>
-    <router-view />
-</template>
+<template>Homepage</template>
 
 <script setup></script>
 
