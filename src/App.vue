@@ -1,7 +1,9 @@
 <template>
-    <router-view />
+    <LayoutVue />
 </template>
 
-<script setup></script>
+<script setup>
+    import LayoutVue from './components/Layout/Layout.vue';
+</script>
 
 <style scoped></style>
