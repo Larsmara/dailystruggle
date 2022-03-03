@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import { Homepage, Login, Signup } from '@/modules';
+import { Homepage, Login, Signup, Profile } from '@/modules';
 
 function routeGuard(to, from, next) {
     const isAuthenticated = true;
@@ -25,6 +25,11 @@ const routes = [
         path: '/signup',
         name: 'Sign up',
         component: Signup
+    },
+    {
+        path: '/profile',
+        name: 'Profile',
+        component: Profile
     }
 ];
 
