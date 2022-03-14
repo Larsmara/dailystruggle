@@ -113,7 +113,8 @@
       </div>
       <!-- Page content here -->
       <div class="container mx-auto my-4 h-full">
-        <router-view />
+        <router-view v-if="store.user" />
+        <Auth v-else />
       </div>
     </div>
     <div class="drawer-side">
@@ -127,9 +128,31 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import NavbarVue from "./Navbar.vue";
 import routes from "../../constants/routes";
+import { store } from "../../modules/User/store/store"
+import { supabase } from "../utils/Supabase"
+import Auth from "../Auth.vue"
+import Profile from "../../modules/User/views/Profile.vue"
+
+export default {
+  components: {
+    Auth,
+    Profile,
+  },
+
+  setup() {
+    store.user = supabase.auth.user()
+    supabase.auth.onAuthStateChange((_, session) => {
+      store.user = session.user
+    })
+
+    return {
+      store,
+    }
+  },
+}
 </script>
 
 <style scoped></style>
